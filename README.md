@@ -45,9 +45,14 @@ These conditions will be detected clear in the gaml file.
 　In my experiment it's obviously I desire the agent to learn controling its speed around the target-speed.   
 # PPO2
 <a href="https://www.codecogs.com/eqnedit.php?latex=J^{\theta&space;'}(\theta&space;)&space;=&space;\sum&space;min(\frac{p_{\theta'&space;}}{p_{\theta&space;}}*A'(s_{t&space;},a_{t&space;})),clip(\frac{p_{\theta'&space;}}{p_{\theta&space;}},1-\varepsilon&space;,1&plus;\varepsilon)*A'(s_{t&space;},a_{t&space;}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J^{\theta&space;'}(\theta&space;)&space;=&space;\sum&space;min(\frac{p_{\theta'&space;}}{p_{\theta&space;}}*A'(s_{t&space;},a_{t&space;})),clip(\frac{p_{\theta'&space;}}{p_{\theta&space;}},1-\varepsilon&space;,1&plus;\varepsilon)*A'(s_{t&space;},a_{t&space;}))" title="J^{\theta '}(\theta ) = \sum min(\frac{p_{\theta' }}{p_{\theta }}*A'(s_{t },a_{t })),clip(\frac{p_{\theta' }}{p_{\theta }},1-\varepsilon ,1+\varepsilon)*A'(s_{t },a_{t }))" /></a>
-## TD
+### TD
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown&space;Advantage&space;=&space;\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(r_{t}&plus;V_{s&plus;1}^{n}-V_{s}^{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown&space;Advantage&space;=&space;\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(r_{t}&plus;V_{s&plus;1}^{n}-V_{s}^{n})" title="\bigtriangledown&space;Advantage&space;=&space;\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(r_{t}&plus;V_{s&plus;1}^{n}-V_{s}^{n})" /></a>
-## MC
+### MC
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown&space;Advantage&space;=&space;\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(R_{t}-V_{s}^{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown&space;Advantage&space;=&space;\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(R_{t}-V_{s}^{n})" title="\bigtriangledown&space;Advantage&space;=&space;\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(R_{t}-V_{s}^{n})" /></a>
-## Actor Critic (TD)
+### Actor Critic (TD)
 　<a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown&space;R&space;=&space;\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(r_{t}&plus;V_{s&plus;1}^{n}-V_{s}^{n})\bigtriangledown&space;log&space;P_{\Theta&space;}(a_{t}^{n}|s_{t}^{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown&space;R&space;=&space;\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(r_{t}&plus;V_{s&plus;1}^{n}-V_{s}^{n})\bigtriangledown&space;log&space;P_{\Theta&space;}(a_{t}^{n}|s_{t}^{n})" title="\bigtriangledown R = \frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}(r_{t}+V_{s+1}^{n}-V_{s}^{n})\bigtriangledown log P_{\Theta }(a_{t}^{n}|s_{t}^{n})" /></a>
+# About GAMA
+　The GAMA is a platefrom to do simulations.      
+　I have a GAMA-modle "simple_intersection.gaml", which is assigned a car and some traffic lights. The model will sent some data  
+　[real_speed, target_speed, elapsed_time_ratio, distance_to_goal,reward,done,time_pass,over]  
+　as a matrix to python environment, calculating the car's accelerate by A2C. And applying to the Markov Decision Process framework, the car in the GAMA will take up the accelerate and send the latest data to python again and over again until  reaching the destination.
