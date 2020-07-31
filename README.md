@@ -16,11 +16,11 @@ And then detections will be executed after the agent choose acceleration to dete
 A unit of time is 1-cycle.  
 ### Collision Detection
 When there is an another car is in front of the car-agent when the two cars are on the same road, if   
-<a href="https://www.codecogs.com/eqnedit.php?latex=EuclideanDistance&space;&plus;&space;v_{car}*t&space;\leq&space;v_{agent}*t&plus;\frac{1}{2}*a*t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EuclideanDistance&space;&plus;&space;v_{car}*t&space;\leq&space;v_{agent}*t&plus;\frac{1}{2}*a*t" title="EuclideanDistance + v_{car}*t \leq v_{agent}*t+\frac{1}{2}*a*t" /></a>     
+<a href="https://www.codecogs.com/eqnedit.php?latex=EuclideanDistance&space;&plus;&space;v_{car}*t&space;\leq&space;v_{agent}*t&plus;\frac{1}{2}*a*t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EuclideanDistance&space;&plus;&space;v_{car}*t&space;\leq&space;v_{agent}*t&plus;\frac{1}{2}*a*t" title="EuclideanDistance + v_{car}*t \leq v_{agent}*t+\frac{1}{2}*a*t^{2}" /></a>     
 the acceleration will be supposed to cause collision with the front cars. (The front cars maybe more than one.)                         
 ### Jam Detection
 When there is an another car is behind of the car-agent when the two cars are on the same road, if     
-<a href="https://www.codecogs.com/eqnedit.php?latex=EuclideanDistance&space;&plus;&space;v_{agent}*t&plus;\frac{1}{2}*a*t&space;\leq&space;v_{car}*t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EuclideanDistance&space;&plus;&space;v_{agent}*t&plus;\frac{1}{2}*a*t&space;\leq&space;v_{car}*t" title="EuclideanDistance + v_{agent}*t+\frac{1}{2}*a*t \leq v_{car}*t" /></a>     
+<a href="https://www.codecogs.com/eqnedit.php?latex=EuclideanDistance&space;&plus;&space;v_{agent}*t&plus;\frac{1}{2}*a*t&space;\leq&space;v_{car}*t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EuclideanDistance&space;&plus;&space;v_{agent}*t&plus;\frac{1}{2}*a*t&space;\leq&space;v_{car}*t" title="EuclideanDistance + v_{agent}*t+\frac{1}{2}*a*t^{2} \leq v_{car}*t" /></a>     
 the acceleration will be supposed to cause jam with the behind cars. (The behind cars maybe more than one.)  
 ## On the different road
 The calculation process is the same as the conditions on the same road.But the conditions become very complex.  
