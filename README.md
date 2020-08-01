@@ -32,6 +32,8 @@ If so, will the cars be the front of the agent or behind of the agent?
 These conditions will be detected clear in the gaml file.
 # Station representation
 [real_speed/10, target_speed/10, elapsed_time_ratio, distance_to_goal/100,distance_front_car/10,distance_behind_car/10]  
+# Action representation
+The network's output are accelerations which are constricted between [-5,8]m/s^2 to be closer to the real situations.
 # Reward shaping
 　Output accelerate.
 　Action representation [acceleration].
