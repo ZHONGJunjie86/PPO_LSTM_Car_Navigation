@@ -1,6 +1,7 @@
 # PPO_LSTM_Car_Navigation
 A car-agent leans to navigate in complex traffic conditions by PPO.  
 The agent is supposed to learn to choose accelerations to reach the destination avoiding causing jam or collision.  
+![image](https://github.com/ZHONGJunjie86/PPO_LSTM_Car_Navigation/blob/master/result/old/ppo1.gif)   
 # Traffic conditions && Collision Detection
 When a car-agent navigates on the road, it may encounter with other cars.   
 In some conditions, the acceleration chosen by car-agent will cause jam or collision.  
@@ -22,6 +23,8 @@ the acceleration will be supposed to cause collision with the front cars. (The f
 When there is an another car is behind of the car-agent when the two cars are on the same road, if     
 <a href="https://www.codecogs.com/eqnedit.php?latex=EuclideanDistance&space;&plus;&space;v_{agent}*t&plus;\frac{1}{2}*a*t^{2}&space;\leq&space;v_{car}*t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?EuclideanDistance&space;&plus;&space;v_{agent}*t&plus;\frac{1}{2}*a*t^{2}&space;\leq&space;v_{car}*t" title="EuclideanDistance + v_{agent}*t+\frac{1}{2}*a*t^{2} \leq v_{car}*t" /></a>    
 the acceleration will be supposed to cause jam with the behind cars. (The behind cars maybe more than one.)  
+#### Jam
+![image](https://github.com/ZHONGJunjie86/PPO_LSTM_Car_Navigation/blob/master/result/old/jam.JPG)   
 ## On the different road
 The calculation process is the same as the conditions on the same road.But the conditions become very complex.  
 The closest 10 cars will on the same road with the agnet?   
