@@ -1,7 +1,7 @@
 # PPO_LSTM_Car_Navigation
 A car-agent leans to navigate in complex traffic conditions by PPO.  
 The agent is supposed to learn to choose accelerations to reach the destination avoiding causing jam or collision.  
-![image](https://github.com/ZHONGJunjie86/PPO_LSTM_Car_Navigation/blob/master/result/old/ppo1.gif)   
+![image](https://github.com/ZHONGJunjie86/Mixed_Input_PPO_CNN_LSTM_Car_Navigation/blob/master/result/image%20inverse%20generation.gif)   
 # Traffic conditions && Collision Detection
 When a car-agent navigates on the road, it may encounter with other cars.   
 In some conditions, the acceleration chosen by car-agent will cause jam or collision.  
